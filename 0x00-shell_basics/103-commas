@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -maps|sort -d
+ls -map|sort -d
