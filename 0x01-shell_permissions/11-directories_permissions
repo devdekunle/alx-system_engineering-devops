@@ -1,2 +1,2 @@
-#!/bin/bas
-find ./* -type d -exec chmod +x {} \;
+#!/bin/bash
+chmod -R a+x .
