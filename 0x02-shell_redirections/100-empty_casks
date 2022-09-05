@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -empty -print
+find . -type f -empty -exec ls -1a '{}' + -o -type d -empty -exec ls -1ad '{}' +
