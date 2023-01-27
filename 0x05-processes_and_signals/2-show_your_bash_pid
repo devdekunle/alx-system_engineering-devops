@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # This script displays lines conataining the word bash and get the process id
-
+# shellcheck disable=SC2009
+ps -aux | grep bash
