@@ -23,5 +23,3 @@ while (( i <= 20 )); do
 		esac
 		(( i++ ))
 done
-
-
