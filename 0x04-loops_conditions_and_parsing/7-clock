@@ -2,7 +2,7 @@
 #implement nested loops
 
 i=0
-while (( i < 12 ));do
+while (( i <= 12 ));do
 	echo "Hour: $i"
 	j=1
 	while (( j <= 59 )); do
