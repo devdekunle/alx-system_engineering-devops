@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#implement nested loops
+#implement nested loops and statements
 
 i=0
 while (( i <= 12 ));do
