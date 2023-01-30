@@ -3,7 +3,7 @@
 
 pid=$(pgrep "bash ./4-to_infinity_and_beyond" -f)
 
-if [ -n $pid ]
+if [ -n "$pid" ]
 then
 	kill -SIGKILL "$pid"
 fi
