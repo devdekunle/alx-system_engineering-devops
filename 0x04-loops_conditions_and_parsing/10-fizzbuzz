@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# A script that implements fizzbuzz
+# prints FizzBuzz if number is a multiple of 3 and 5
+#prints Buzz if number is a multiple of 5
+#prints Fizz if number is a multiple of 3
+
+i=1
+while (( i <= 100));do
+	if [ $((i % 5)) -eq 0 ] && [ $((i % 3)) -eq 0 ];then
+		echo "FizzBuzz"
+	elif [[ $((i % 3)) -eq 0 ]];then
+		echo "Fizz"
+	elif [[ $((i % 5)) -eq 0 ]];then
+		echo "Buzz"
+	else
+		echo "$i"
+	fi
+	((i++))
+done
