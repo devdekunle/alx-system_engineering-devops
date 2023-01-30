@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# A script that kills a script that traps signals
+pkill -9 -f "bash ./7-highlander"
