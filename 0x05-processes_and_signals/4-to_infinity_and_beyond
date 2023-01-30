@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# A script to display infinity and beyong indefinitely
+
+True=True
+while [ "$True" ];do
+	echo "To Infinity and beyond"
+	sleep 2
+done
