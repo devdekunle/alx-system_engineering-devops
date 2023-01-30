@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# A script that sends a SIGTERM signal to a program.
+
+True=True
+
+while [ "$True" ];do
+	echo "To infinity and beyond"
+	sleep 2
+	trap "echo I am invincible" 15
+done
