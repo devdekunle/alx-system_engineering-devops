@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # A script to send a sigkill signal to a running program
 
-pid=$(pgrep "bash ./4-to_infinity_and_beyond" -f)
+pid=$(pgrep -f "bash ./4-to_infinity_and_beyond")
 
 if [ -n "$pid" ]
 then
