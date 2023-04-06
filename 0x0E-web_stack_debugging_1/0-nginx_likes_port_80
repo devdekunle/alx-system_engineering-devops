@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#script to link the default file in sites-enabled to the default file in sites-available
+
+sudo rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default
+sudo service nginx restart
