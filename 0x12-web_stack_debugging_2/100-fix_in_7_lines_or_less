@@ -3,5 +3,5 @@
 pkill apache
 sed -i 's/80/8080/g' /etc/nginx/sites-available/default
 chown nginx:nginx /etc/nginx/nginx.conf
-chmod 777 /etc/nginx/nginx.conf
+chmod a+rwx /etc/nginx/nginx.conf
 sudo -u nginx service nginx start
