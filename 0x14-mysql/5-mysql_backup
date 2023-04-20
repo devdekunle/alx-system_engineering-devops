@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 #script to back up mysql database and create a archive from it
 mysqldump -u root -p"$1" --all-databases > backup.sql
-tar -cvfz $"(date +%d-%m-%Y).tar.gz" backup.sql
+file_name=$(date +'%d-%m-%Y').tar.gz
+tar cfvz "$file_name" backup.sql
