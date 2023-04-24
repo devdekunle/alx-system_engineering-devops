@@ -8,6 +8,7 @@ about his/her TODO list progress.
 if __name__ == "__main__":
     import requests
     from sys import argv
+    import csv
 
     # api url to get user info and todo list for each user
     url_1 = 'https://jsonplaceholder.typicode.com/users/{}'
@@ -20,6 +21,7 @@ if __name__ == "__main__":
     user_todo_response = requests.get(user_todo_url)
     # get json dictionary representation of user details
     user_name = user_response.json().get('name')
+    username = user_response.json().get('username')
     # get json dictionary representation of todo list
     todo_list = user_todo_response.json()
 
@@ -36,3 +38,13 @@ if __name__ == "__main__":
     for task in todo_list:
         if task.get('completed') is True:
             print('\t {}'.format(task.get('title')))
+    # export data in the csv format
+    with open('{}.csv'.format(argv[1]), 'w') as file:
+        user_write = csv.writer(file, quotechar='"', quoting=csv.QUOTE_ALL)
+
+        for data in todo_list:
+            user_id = data.get('userId')
+            task = data.get('completed')
+            title = data.get('title')
+
+            user_write.writerow([user_id, username, task, title])
