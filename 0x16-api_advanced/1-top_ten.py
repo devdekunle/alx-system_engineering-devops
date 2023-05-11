@@ -9,7 +9,7 @@ def top_ten(subreddit):
     """ prints the titles"""
     sub_reddit = requests.get("https://www.reddit.com/r/{}/hot.json?limit=10"
                               .format(subreddit),
-                               headers={"user-agent":"google-chrome"},
+                              headers={"user-agent": "google-chrome"},
                               allow_redirects=False)
     if sub_reddit.status_code >= 300:
         print('None')
