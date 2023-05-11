@@ -13,6 +13,6 @@ def top_ten(subreddit):
                               allow_redirects=False)
     if sub_reddit.status_code >= 300:
         print('None')
-
-    for value in sub_reddit.json().get('data').get('children'):
-        print(value.get('data').get('title'))
+    else:
+        for value in sub_reddit.json().get('data').get('children'):
+            print(value.get('data').get('title'))
