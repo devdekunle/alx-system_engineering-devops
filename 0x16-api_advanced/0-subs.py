@@ -10,11 +10,11 @@ import requests
 def number_of_subscribers(subreddit):
     """ returns the number of subscribers for a subreddit"""
     subreddit = requests.get('https://www.reddit.com/r/{}/about.json'
-                            .format(subreddit),
-                            headers={'user-agent': "google-chrome"},
-                            allow_redirects=False)
+                             .format(subreddit),
+                             headers={'user-agent': "google-chrome"},
+                             allow_redirects=False)
 
-    if subreddit.status_code >=300:
+    if subreddit.status_code >= 300:
         return 0
 
     return subreddit.json().get('data').get('subscribers')
