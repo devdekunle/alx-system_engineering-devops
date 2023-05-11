@@ -12,9 +12,9 @@ def recurse(subreddit, hot_list=[], count=0, after=None):
     """
     url = "https://www.reddit.com/r/{}/hot.json"
     sub_reddit = requests.get(url.format(subreddit),
-                   headers={"User-Agent": "google-chrome"},
-                   params={"count": count, "after": after},
-                   allow_redirects=False)
+                              headers={"User-Agent": "google-chrome"},
+                              params={"count": count, "after": after},
+                              allow_redirects=False)
 
     if sub_reddit.status_code >= 300:
         return None
@@ -27,7 +27,6 @@ def recurse(subreddit, hot_list=[], count=0, after=None):
 
     if not sub_reddit.json().get('data').get('after'):
         return hot_list
-
 
     return recurse(subreddit, hot_list,
                    sub_reddit.json().get('data').get('count'),
